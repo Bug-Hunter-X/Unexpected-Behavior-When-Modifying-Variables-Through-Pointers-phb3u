@@ -1,0 +1,1 @@
+int main() {const int x = 10; int *ptr = (int*)&x; //Casting away const is generally bad practice, but demonstrates the issue. *ptr = 20; printf("%d", x); return 0;} //This will print 10 because the modification through a pointer will only affect a copy of x in this case.
